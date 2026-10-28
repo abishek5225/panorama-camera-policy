@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07090D" />
+  <title>Panorama 360 Camera — Every direction. One frame.</title>
+  <meta name="description" content="A premium, private camera for seamless panoramas and immersive 360° spheres. No ads, no account, no upload." />
+  <style>
+    :root { --ink:#07090D; --surface:#11161F; --line:#2A3442; --gold:#D8B26A; --bright:#F2DCA6; --ivory:#F7F2E8; --mist:#AAB5C3; --aurora:#71E2C4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:var(--ivory); font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    .glow { position:fixed; inset:0; pointer-events:none; background: radial-gradient(900px 600px at 82% -8%, rgba(216,178,106,.18), transparent 62%), radial-gradient(700px 600px at -10% 90%, rgba(113,226,196,.06), transparent 60%); }
+    .wrap { position:relative; max-width:1120px; margin:auto; padding:38px 24px 90px; }
+    header { display:flex; align-items:center; gap:12px; }
+    .mark { width:42px; height:42px; border:1.5px solid var(--gold); border-radius:50%; position:relative; }
+    .mark:before { content:""; position:absolute; left:9px; right:9px; top:21px; height:9px; border-bottom:2px solid var(--ivory); border-radius:50%; transform:rotate(-6deg); }
+    .brand { font-family: Georgia, "Times New Roman", serif; font-size:25px; }
+    .brand span { color:var(--gold); font-family: ui-sans-serif, sans-serif; font-size:11px; letter-spacing:1px; margin-left:6px; }
+    .nav { margin-left:auto; display:flex; gap:22px; font-size:13px; }
+    .nav a { color:var(--mist); text-decoration:none; }
+    .nav a:hover { color:var(--gold); }
+    .hero { display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center; padding:78px 0 58px; }
+    .eyebrow { color:var(--gold); font-size:11px; letter-spacing:2.8px; font-weight:700; text-transform:uppercase; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-weight:400; font-size: clamp(52px, 8vw, 90px); line-height:.97; letter-spacing:-2.6px; margin:16px 0 20px; }
+    h1 em { color:var(--gold); font-style:italic; }
+    .lede { color:var(--mist); font-size:18px; max-width:560px; }
+    .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; gap:9px; padding:14px 22px; border-radius:16px; text-decoration:none; font-size:14px; font-weight:700; letter-spacing:.2px; }
+    .primary { background:linear-gradient(135deg,var(--bright),var(--gold),#A97C39); color:var(--ink); box-shadow:0 18px 40px rgba(216,178,106,.14); }
+    .secondary { border:1px solid var(--line); color:var(--ivory); background:rgba(17,22,31,.6); }
+    .planet { width:min(430px, 90vw); aspect-ratio:1; border-radius:50%; position:relative; margin:auto; background: radial-gradient(circle at 38% 30%, #f6e0a5, transparent 0%, transparent 100%), url('./feature-graphic-1024x500.png') center/cover; border:1px solid rgba(216,178,106,.35); box-shadow: 0 40px 100px rgba(0,0,0,.5), 0 0 0 12px rgba(216,178,106,.035); overflow:hidden; }
+    .planet img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+    .badge { position:absolute; left:50%; bottom:-18px; transform:translateX(-50%); background:var(--ink); border:1px solid rgba(216,178,106,.35); color:var(--gold); font-size:10px; letter-spacing:2px; padding:8px 14px; border-radius:999px; white-space:nowrap; }
+    .screens { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; padding:58px 0 30px; }
+    .screens img { width:100%; border-radius:16px; border:1px solid var(--line); display:block; }
+    section { padding:60px 0 10px; }
+    h2 { font-family: Georgia, serif; font-weight:400; font-size: clamp(32px, 4vw, 46px); letter-spacing:-1px; margin:0 0 16px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px; }
+    .card { border:1px solid var(--line); border-radius:18px; padding:20px; background:rgba(17,22,31,.55); }
+    .card h3 { margin:0 0 6px; font-size:16px; }
+    .card p { margin:0; color:var(--mist); font-size:14px; }
+    .icon { color:var(--gold); font-size:20px; margin-bottom:12px; }
+    .quote { border-left:2px solid var(--gold); padding-left:22px; margin:44px 0; font-family: Georgia, serif; font-size:clamp(24px,3.4vw,36px); line-height:1.2; color:var(--ivory); letter-spacing:-.5px; }
+    .quote small { display:block; color:var(--gold); font-family: ui-sans-serif, sans-serif; font-size:11px; letter-spacing:2px; margin-top:12px; }
+    footer { border-top:1px solid var(--line); margin-top:60px; padding-top:20px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; color:var(--mist); font-size:13px; }
+    footer a { color:var(--gold); text-decoration:none; }
+    @media (max-width:860px) { .hero { grid-template-columns:1fr; padding-top:52px; } .planet { width:min(360px,80vw); } .screens { grid-template-columns:1fr 1fr; } .screens img:nth-child(3){ display:none; } .grid { grid-template-columns:1fr; } .nav { display:none; } }
+  </style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <div class="mark" aria-hidden="true"></div>
+    <div class="brand">Panorama<span>360</span></div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="./privacy.html">Policy</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Aura Stitch · Android</div>
+      <h1>Every direction.<br/><em>One frame.</em></h1>
+      <p class="lede">A private, premium camera for seamless panoramas and immersive 360° spheres. Sweep once; Aura locks every frame with gyro precision and weaves the whole scene in seconds.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.panorama360.camera">Get it on Google Play</a>
+        <a class="btn secondary" href="https://github.com/abishek5225/Panorama-Camera">View source</a>
+      </div>
+    </div>
+    <div class="planet">
+      <img src="demo_planet.png" alt="A little planet view of an alpine meadow" />
+      <div class="badge">360° · LITTLE PLANET</div>
+    </div>
+  </div>
+
+  <div class="screens">
+    <img src="screenshot-onboarding.png" alt="Aura onboarding" />
+    <img src="screenshot-sphere.png" alt="360° viewer" />
+    <img src="screenshot-gallery.png" alt="Gallery" />
+  </div>
+
+  <section id="features">
+    <div class="eyebrow">Built differently</div>
+    <h2>The camera that sees the whole room.</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">◉</div><h3>Gyro-locked stitching</h3><p>No feature search. Aura reads rotation at exposure time, projects onto a sphere and blends on the GPU — even on blank walls.</p></div>
+      <div class="card"><div class="icon">◎</div><h3>True 360° photos</h3><p>2:1 equirectangular output with GPano metadata, ready for Google Photos and other immersive viewers.</p></div>
+      <div class="card"><div class="icon">◇</div><h3>Little planet</h3><p>Step inside any sphere, look around with the gyroscope and switch to a stereographic planet in one tap.</p></div>
+      <div class="card"><div class="icon">✦</div><h3>Premium editor</h3><p>Eight curated looks, precise light controls, crop and rotate, saved as a new copy with metadata preserved.</p></div>
+      <div class="card"><div class="icon">▣</div><h3>Quietly capable</h3><p>Flash, timer, zoom, tap focus, exposure, level, grid, watermark and optional geotagging.</p></div>
+      <div class="card"><div class="icon">◇</div><h3>Private by design</h3><p>No account, no ads, no analytics, no cloud. The app has no network permission at all.</p></div>
+    </div>
+  </section>
+
+  <div class="quote">“The camera is an instrument that teaches people how to see without a camera.”<small>— DOROTHEA LANGE</small></div>
+
+  <section id="privacy">
+    <div class="eyebrow">Privacy</div>
+    <h2>Your memories stay yours.</h2>
+    <p class="lede">Camera frames are processed on this device. Photos are written to your own gallery. There is no account, no advertising and no upload. Read the <a href="./privacy.html" style="color:var(--gold)">full privacy policy</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Panorama 360 Camera · Aura Stitch</span>
+    <span><a href="./privacy.html">Privacy</a> · <a href="https://github.com/abishek5225/Panorama-Camera">GitHub</a> · Made for the moments between.</span>
+  </footer>
+</div>
+</body>
+</html>
